@@ -8,6 +8,4 @@ import 'package:ffi/ffi.dart';
 ///   BYTE rgbRed;
 ///   BYTE rgbReserved;
 /// } RGBQUAD;
-class RGBQUAD extends Struct {
-  
-}
+class RGBQUAD extends Struct {}

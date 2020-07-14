@@ -17,6 +17,5 @@ typedef GetDIBitsDart = int Function(Pointer hdc, Pointer hbm, int start,
 ///   LPBITMAPINFO lpbmi,
 ///   UINT         usage
 /// );
-
 final GetDIBitsDart GetDIBits =
     Gdi32.lookupFunction<GetDIBitsC, GetDIBitsDart>('GetDIBits');

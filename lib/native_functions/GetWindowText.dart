@@ -13,6 +13,5 @@ typedef GetWindowTextDart = int Function(
 ///   LPSTR lpString,
 ///   int   nMaxCount
 /// );
-
 final GetWindowTextDart GetWindowText =
     User32.lookupFunction<GetWindowTextC, GetWindowTextDart>('GetWindowTextA');

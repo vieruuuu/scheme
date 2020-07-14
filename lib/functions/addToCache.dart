@@ -13,8 +13,8 @@ void addToCache(String text) {
 void emptyCache() {
   final _cache = cache;
 
-    print('sent cache');
-    print(_cache);
+  print('sent cache');
+  print(_cache);
 
   cache = '';
 }

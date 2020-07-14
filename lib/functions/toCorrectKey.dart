@@ -83,7 +83,7 @@ String toCorrectKey(int wParam, int key) {
   }
 
   finalKey = MapVirtualKeyEx(key, MAPVK_VK_TO_CHAR, layout);
-  
+
   if (finalKey == 0) {
     return '';
   }
