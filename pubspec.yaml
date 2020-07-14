@@ -1,0 +1,4 @@
+name: schema
+
+dependencies:
+  ffi: ^0.1.3
