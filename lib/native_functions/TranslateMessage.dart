@@ -1,7 +1,7 @@
 import 'dart:ffi';
 
 import 'package:schema/dylib/User32.dart';
-import 'package:schema/types/MSG.dart';
+import 'package:schema/native_types/MSG.dart';
 
 typedef TranslateMessageC = Int32 Function(Pointer<MSG> lpMsg);
 

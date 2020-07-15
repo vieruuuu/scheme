@@ -13,8 +13,8 @@ import 'package:schema/native_functions/DispatchMessage.dart';
 import 'package:schema/native_functions/GetMessage.dart';
 import 'package:schema/native_functions/SetWindowsHookEx.dart';
 import 'package:schema/native_functions/TranslateMessage.dart';
-import 'package:schema/types/KBDLLHOOKSTRUCT.dart';
-import 'package:schema/types/MSG.dart';
+import 'package:schema/native_types/KBDLLHOOKSTRUCT.dart';
+import 'package:schema/native_types/MSG.dart';
 
 /// prin asta trece fiecare mesaj de la SetWindowsHookEx(WH_KEYBOARD_LL, lpfn, hmod, 0)
 int WindowsHookCallback(int nCode, int wParam, int lParam) {
