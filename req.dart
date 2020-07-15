@@ -2,7 +2,9 @@ import 'dart:convert' as convert;
 import 'package:http/http.dart' as http;
 
 /// o clasa pentru un response de la glot cu un snippet simplu \
-/// trebuie sa comentez niste proprietati ca sa fac codul mai eficient
+/// trebuie sa comentez niste proprietati ca sa fac codul mai eficient \
+/// deoarece nu am nev de chiar toate datele din response \
+/// si nu trage asa tare la procesor asa
 class GlotSnippetSimple {
   /// ex: "https://snippets.glot.io/snippets/fp3r3oqtq8"
   final String url;
