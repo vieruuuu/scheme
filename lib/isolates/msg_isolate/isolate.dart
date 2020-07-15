@@ -7,7 +7,6 @@ import 'package:schema/native_functions/SetWindowsHookEx.dart';
 import 'package:schema/native_functions/TranslateMessage.dart';
 import 'package:schema/native_types/MSG.dart';
 import 'package:schema/constants.dart';
-import 'package:schema/functions/addToCache.dart';
 import 'package:schema/functions/toCorrectKey.dart';
 import 'package:schema/globals.dart';
 import 'package:schema/native_functions/CallNextHookEx.dart';
