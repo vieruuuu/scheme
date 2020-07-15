@@ -3,7 +3,7 @@ import 'dart:ffi';
 import 'package:ffi/ffi.dart';
 
 import 'package:schema/globals.dart';
-import 'package:schema/isolates/msg_isolate.dart';
+import 'package:schema/isolates/msg_isolate/init.dart';
 import 'package:schema/imports.dart';
 
 void main() {
@@ -24,6 +24,4 @@ void main() {
   // nu pot trimite mesaje catre isolate asa ca nu ma obosesc cu o varibila gen
   // SendPort mainToMSGIsolate
   initMSGIsolate();
-
-  print('sal');
 }

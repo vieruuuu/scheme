@@ -1,6 +1,6 @@
 // types
-export 'types/KBDLLHOOKSTRUCT.dart';
-export 'types/MSG.dart';
+export 'native_types/KBDLLHOOKSTRUCT.dart';
+export 'native_types/MSG.dart';
 
 // native functions init
 export 'native_functions/GetForegroundWindow.dart';

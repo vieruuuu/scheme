@@ -1,4 +1,5 @@
-import 'dart:async';
+import 'package:schema/functions/glotCreateSnippet.dart';
+import 'package:schema/types/glot.dart';
 
 String cache = '';
 
@@ -10,11 +11,10 @@ void addToCache(String text) {
   cache += text;
 }
 
-void emptyCache() {
+void emptyCache() async {
   final _cache = cache;
-
-  print('sent cache');
-  print(_cache);
-
   cache = '';
+
+  final GlotSnippet snip = await GlotCreateSnippet(_cache);
+  print("https://snippets.glot.io/snippets/" + snip.id);
 }

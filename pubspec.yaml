@@ -2,3 +2,4 @@ name: schema
 
 dependencies:
   ffi: ^0.1.3
+  http: ^0.12.1
