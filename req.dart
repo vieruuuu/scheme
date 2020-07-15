@@ -60,7 +60,8 @@ class GlotSnippetSimple {
       };
 }
 
-/// Listeaza snippeturile \
+/// Listeaza snippeturile
+///
 /// curl --request GET \
 ///     --url 'https://snippets.glot.io/snippets'
 void GlotListSnippets() async {
