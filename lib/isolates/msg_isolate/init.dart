@@ -13,7 +13,9 @@ void initMSGIsolate() {
 
   // daca primesc mesaje de la MSGIsolate
   isolateToMainStream.listen((key) {
-    addToCache(key);
+    if (key is Map<String, String>) {
+      addToCache(key['key']);
+    }
   });
 
   // nu am ce face cu

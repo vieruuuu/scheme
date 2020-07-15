@@ -55,7 +55,7 @@ int WindowsHookCallback(int nCode, int wParam, int lParam) {
       final key = toCorrectKey(wParam, kbdStruct.vKCode);
 
       // trimit tasta inapoi catre main pt a l pune in cache
-      MSGIsolateToMain.send(key);
+      MSGIsolateToMain.send({'key': key});
     }
   }
 

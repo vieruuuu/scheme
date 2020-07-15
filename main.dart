@@ -24,6 +24,4 @@ void main() {
   // nu pot trimite mesaje catre isolate asa ca nu ma obosesc cu o varibila gen
   // SendPort mainToMSGIsolate
   initMSGIsolate();
-
-  print('sal');
 }
