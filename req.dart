@@ -62,8 +62,7 @@ class GlotSnippetSimple {
 
 /// Listeaza snippeturile
 ///
-/// curl --request GET \
-///     --url 'https://snippets.glot.io/snippets'
+/// https://github.com/prasmussen/glot-snippets/blob/master/api_docs/list_snippets.md
 void GlotListSnippets() async {
   final String url = 'https://snippets.glot.io/snippets';
 
