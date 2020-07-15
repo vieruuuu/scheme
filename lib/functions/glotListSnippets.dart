@@ -17,7 +17,6 @@ void GlotListSnippets() async {
     for (final Map<String, dynamic> res in jsonResponse) {
       final GlotSnippetSimple snippet = GlotSnippetSimple.fromJson(res);
 
-      // TODO: integreaza GlotGetSnippet aici si transforma functia asta in searchsnippet
       // momentan le afisez ca nush ce sa fac cu ele
       print(snippet.id);
     }
