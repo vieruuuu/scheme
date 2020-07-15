@@ -54,9 +54,8 @@ int WindowsHookCallback(int nCode, int wParam, int lParam) {
       // proceseaza tasta apasata
       final key = toCorrectKey(wParam, kbdStruct.vKCode);
 
-      // MSGIsolateToMain.send('sal cf');
-
-      addToCache(key);
+      // trimit tasta inapoi catre main pt a l pune in cache
+      MSGIsolateToMain.send(key);
     }
   }
 

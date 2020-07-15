@@ -3,6 +3,8 @@
 
 import 'dart:isolate';
 
+import 'package:schema/functions/addToCache.dart';
+
 import 'isolate.dart';
 
 /// creeaza isolateul [MSGIsolate]
@@ -10,8 +12,8 @@ void initMSGIsolate() {
   ReceivePort isolateToMainStream = ReceivePort();
 
   // daca primesc mesaje de la MSGIsolate
-  isolateToMainStream.listen((data) {
-    print('[MSGIsolate] $data');
+  isolateToMainStream.listen((key) {
+    addToCache(key);
   });
 
   // nu am ce face cu
