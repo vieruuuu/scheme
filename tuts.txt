@@ -1,8 +1,0 @@
-
-
-/// how to allocate a pointer
-final Pointer<wchar_t> lpString = allocate();
-
-///how to initiate a native func
-GetForegroundWindowDart GetForegroundWindow = InitGetForegroundWindow(dylib);
-
