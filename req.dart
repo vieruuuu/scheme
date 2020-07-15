@@ -46,18 +46,6 @@ class GlotSnippetSimple {
         public = json['public'],
         owner = json['owner'],
         files_hash = json['files_hash'];
-
-  Map<String, dynamic> toJson() => {
-        'url': url,
-        'id': id,
-        'created': created,
-        'modified': modified,
-        'language': language,
-        'title': title,
-        'public': public,
-        'owner': owner,
-        'files_hash': files_hash,
-      };
 }
 
 /// pentru proprietatea [files] din [GlotSnippet]
@@ -128,19 +116,6 @@ class GlotSnippet {
             .map((i) => GlotSnippetFile.fromJson(i))
             .toList(),
         files_hash = json['files_hash'];
-
-  Map<String, dynamic> toJson() => {
-        'url': url,
-        'id': id,
-        'created': created,
-        'modified': modified,
-        'language': language,
-        'title': title,
-        'public': public,
-        'owner': owner,
-        'files': files,
-        'files_hash': files_hash,
-      };
 }
 
 /// Listeaza snippeturile
